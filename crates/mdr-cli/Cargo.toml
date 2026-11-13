@@ -1,0 +1,15 @@
+[package]
+name = "mdr-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Parchment CLI (`parch`): render Markdown files or folders to themed HTML/CSS."
+
+[[bin]]
+name = "parch"
+path = "src/main.rs"
+
+[dependencies]
+mdr-core = { path = "../mdr-core" }
+clap = { version = "4", features = ["derive"] }

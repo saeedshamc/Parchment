@@ -1,0 +1,9 @@
+/target
+/app/src-tauri/target
+/app/src-tauri/gen
+/dist
+/dist-web
+/dist-site
+*.html.bak
+.DS_Store
+node_modules

@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["crates/mdr-core", "crates/mdr-cli", "crates/mdr-wasm"]
+# `cargo build` / `cargo test` at the root only touch the core and the CLI.
+default-members = ["crates/mdr-core", "crates/mdr-cli"]
+# The Tauri app is built with `cargo tauri` and has its own lockfile.
+exclude = ["app/src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Parchment contributors"]
+description = "Render Markdown to themed HTML/CSS. Rust core, CLI, desktop, Android and WASM."
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

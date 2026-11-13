@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Parchment">
+<title>نمونه‌ی Parchment</title>
+<style>
+:root{--hl-comment:#6a737d;--hl-string:#0a7f5a;--hl-keyword:#d73a49;--hl-number:#005cc5;--hl-func:#6f42c1;--hl-var:#e36209}
+@media (prefers-color-scheme:dark){:root{--hl-comment:#8b949e;--hl-string:#7ee787;--hl-keyword:#ff7b72;--hl-number:#79c0ff;--hl-func:#d2a8ff;--hl-var:#ffa657}}
+.hl-comment{color:var(--hl-comment);font-style:italic}
+.hl-string{color:var(--hl-string)}
+.hl-keyword,.hl-storage{color:var(--hl-keyword)}
+.hl-constant{color:var(--hl-number)}
+.hl-entity.hl-name,.hl-support{color:var(--hl-func)}
+.hl-variable{color:var(--hl-var)}
+/* Parchment template: github */
+:root{color-scheme:light dark;--bg:#fff;--fg:#1f2328;--muted:#59636e;--border:#d1d9e0;--link:#0969da;--accent:#d1d9e0;--code-bg:#f6f8fa;--font:"Vazirmatn","Vazir","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Tahoma,Arial,sans-serif;--size:16px;--lh:1.6;--width:860px}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--border:#3d444d;--link:#4493f8;--accent:#3d444d;--code-bg:#151b23}}
+h1,h2{padding-bottom:.3em;border-bottom:1px solid var(--border)}
+h1{font-size:2em}h2{font-size:1.5em}h3{font-size:1.25em}h4{font-size:1em}h1,h2,h3,h4,h5,h6{font-weight:600}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:var(--size);line-height:var(--lh)}
+.page{max-width:var(--width);margin:0 auto;padding:2rem 1.25rem 5rem}
+.markdown-body{overflow-wrap:break-word}
+h1,h2,h3,h4,h5,h6{font-family:var(--heading-font,inherit);line-height:1.25;margin:1.7em 0 .6em}
+.markdown-body>:first-child{margin-top:0}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+p,ul,ol,blockquote,pre,table,details,figure{margin:0 0 1.1em}
+ul,ol{padding-inline-start:2em}
+li+li{margin-top:.25em}
+li>ul,li>ol{margin:.25em 0 0}
+img{max-width:100%;height:auto}
+hr{border:0;border-top:1px solid var(--border);margin:2em 0}
+blockquote{margin-inline:0;padding:.1em 1em;color:var(--muted);border-inline-start:.25em solid var(--accent)}
+blockquote>:last-child{margin-bottom:0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+code{font-size:.875em;background:var(--code-bg);padding:.15em .4em;border-radius:5px}
+pre{background:var(--code-bg);padding:1rem;overflow:auto;border-radius:8px;line-height:1.5;direction:ltr;text-align:left;position:relative;border:1px solid var(--border)}
+pre code{background:none;padding:0;border-radius:0;font-size:.85em}
+pre[data-lang]::before{content:attr(data-lang);position:absolute;top:.25rem;right:.6rem;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-family:var(--font)}
+table{display:block;width:max-content;max-width:100%;overflow:auto;border-collapse:collapse}
+th,td{padding:.4em .8em;border:1px solid var(--border);text-align:start}
+th{background:var(--code-bg);font-weight:600}
+li>input[type=checkbox]{margin-inline:0 .45em}
+.footnote-definition{font-size:.9em;color:var(--muted);display:flex;gap:.5em}
+.footnote-definition p{margin:0}
+.footnote-definition-label{font-weight:600}
+sup.footnote-reference{font-size:.75em}
+.toc{background:var(--code-bg);border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;margin:0 0 2rem;font-size:.95em}
+.toc summary{cursor:pointer;font-weight:600}
+.toc ul{list-style:none;margin:.3em 0 0;padding-inline-start:1.1em}
+.toc>details>ul{padding-inline-start:0}
+.toc li+li{margin-top:.15em}
+@media print{body{background:#fff;color:#000}.toc{display:none}a{color:inherit}pre{white-space:pre-wrap}}
+</style>
+</head>
+<body>
+<main class="page">
+<nav class="toc" aria-label="فهرست مطالب"><details open><summary>فهرست مطالب</summary><ul><li><a href="#امکانات">امکانات</a><ul><li><a href="#جدول">جدول</a></li><li><a href="#چک-لیست">چک‌لیست</a></li></ul></li><li><a href="#کد">کد</a></li><li><a href="#english-section">English section</a></li><li><a href="#پیوندها">پیوندها</a></li></ul></details></nav>
+<article class="markdown-body">
+<h1 id="parchment-رندر-مارک-داون" dir="auto">Parchment؛ رندر مارک‌داون</h1>
+<p dir="auto">این یک <strong>نمونه‌ی فارسی</strong> است که با <code>parch</code> به HTML تبدیل می‌شود. متن راست‌به‌چپ، کد چپ‌به‌راست و اعداد ۱۲۳ یا 123 هر دو درست نمایش داده می‌شوند.</p>
+<h2 id="امکانات" dir="auto">امکانات</h2>
+<ul>
+<li dir="auto">پشتیبانی کامل از <strong>RTL</strong> و فارسی</li>
+<li dir="auto">جدول، چک‌لیست، پاورقی و <del>خط‌خورده</del></li>
+<li dir="auto">رنگی‌سازی کد</li>
+</ul>
+<h3 id="جدول" dir="auto">جدول</h3>
+<table><thead><tr><th style="text-align: left">قالب</th><th style="text-align: left">سبک</th><th style="text-align: center">تاریک</th></tr></thead><tbody>
+<tr><td style="text-align: left">github</td><td style="text-align: left">شبیه گیت‌هاب</td><td style="text-align: center">خودکار</td></tr>
+<tr><td style="text-align: left">minimal</td><td style="text-align: left">خوانا</td><td style="text-align: center">خودکار</td></tr>
+<tr><td style="text-align: left">dark</td><td style="text-align: left">تیره</td><td style="text-align: center">همیشه</td></tr>
+</tbody></table>
+<h3 id="چک-لیست" dir="auto">چک‌لیست</h3>
+<ul>
+<li dir="auto"><input disabled="" type="checkbox" checked=""/>
+هسته‌ی Rust</li>
+<li dir="auto"><input disabled="" type="checkbox" checked=""/>
+ابزار خط فرمان</li>
+<li dir="auto"><input disabled="" type="checkbox"/>
+نسخه‌ی اندروید</li>
+</ul>
+<h2 id="کد" dir="auto">کد</h2>
+<pre class="code" data-lang="rust"><code class="language-rust"><span class="hl-source hl-rust"><span class="hl-meta hl-function hl-rust"><span class="hl-meta hl-function hl-rust"><span class="hl-storage hl-type hl-function hl-rust">fn</span> </span><span class="hl-entity hl-name hl-function hl-rust">main</span></span><span class="hl-meta hl-function hl-rust"><span class="hl-meta hl-function hl-parameters hl-rust"><span class="hl-punctuation hl-section hl-parameters hl-begin hl-rust">(</span></span><span class="hl-meta hl-function hl-rust"><span class="hl-meta hl-function hl-parameters hl-rust"><span class="hl-punctuation hl-section hl-parameters hl-end hl-rust">)</span></span></span></span><span class="hl-meta hl-function hl-rust"> </span><span class="hl-meta hl-function hl-rust"><span class="hl-meta hl-block hl-rust"><span class="hl-punctuation hl-section hl-block hl-begin hl-rust">{</span>
+    <span class="hl-storage hl-type hl-rust">let</span> name <span class="hl-keyword hl-operator hl-rust">=</span> <span class="hl-string hl-quoted hl-double hl-rust"><span class="hl-punctuation hl-definition hl-string hl-begin hl-rust">&quot;</span>Parchment<span class="hl-punctuation hl-definition hl-string hl-end hl-rust">&quot;</span></span><span class="hl-punctuation hl-terminator hl-rust">;</span>
+    <span class="hl-support hl-macro hl-rust">println!</span><span class="hl-meta hl-group hl-rust"><span class="hl-punctuation hl-section hl-group hl-begin hl-rust">(</span></span><span class="hl-meta hl-group hl-rust"><span class="hl-string hl-quoted hl-double hl-rust"><span class="hl-punctuation hl-definition hl-string hl-begin hl-rust">&quot;</span>Hello, <span class="hl-constant hl-other hl-placeholder hl-rust">{name}</span>!<span class="hl-punctuation hl-definition hl-string hl-end hl-rust">&quot;</span></span></span><span class="hl-meta hl-group hl-rust"><span class="hl-punctuation hl-section hl-group hl-end hl-rust">)</span></span><span class="hl-punctuation hl-terminator hl-rust">;</span> <span class="hl-comment hl-line hl-double-slash hl-rust"><span class="hl-punctuation hl-definition hl-comment hl-rust">//</span> سلام
+</span></span><span class="hl-meta hl-block hl-rust"><span class="hl-punctuation hl-section hl-block hl-end hl-rust">}</span></span></span>
+</span></code></pre>
+<pre class="code" data-lang="python"><code class="language-python"><span class="hl-source hl-python"><span class="hl-meta hl-function hl-python"><span class="hl-storage hl-type hl-function hl-python">def</span> <span class="hl-entity hl-name hl-function hl-python"><span class="hl-meta hl-generic-name hl-python">greet</span></span></span><span class="hl-meta hl-function hl-parameters hl-python"><span class="hl-punctuation hl-section hl-parameters hl-begin hl-python">(</span></span><span class="hl-meta hl-function hl-parameters hl-python"><span class="hl-variable hl-parameter hl-python">name</span></span><span class="hl-meta hl-function hl-parameters hl-annotation hl-python"><span class="hl-punctuation hl-separator hl-annotation hl-parameter hl-python">:</span> <span class="hl-meta hl-qualified-name hl-python"><span class="hl-support hl-type hl-python">str</span></span></span><span class="hl-meta hl-function hl-parameters hl-python"><span class="hl-punctuation hl-section hl-parameters hl-end hl-python">)</span></span><span class="hl-meta hl-function hl-python"> </span><span class="hl-meta hl-function hl-annotation hl-return hl-python"><span class="hl-punctuation hl-separator hl-annotation hl-return hl-python">-&gt;</span> <span class="hl-meta hl-qualified-name hl-python"><span class="hl-support hl-type hl-python">str</span></span></span><span class="hl-meta hl-function hl-python"><span class="hl-punctuation hl-section hl-function hl-begin hl-python">:</span></span>
+    <span class="hl-keyword hl-control hl-flow hl-return hl-python">return</span> <span class="hl-storage hl-type hl-string hl-python">f</span><span class="hl-meta hl-string hl-interpolated hl-python"><span class="hl-string hl-quoted hl-double hl-python"><span class="hl-punctuation hl-definition hl-string hl-begin hl-python">&quot;</span></span></span><span class="hl-meta hl-string hl-interpolated hl-python"><span class="hl-string hl-quoted hl-double hl-python">Hello </span><span class="hl-meta hl-interpolation hl-python"><span class="hl-punctuation hl-section hl-interpolation hl-begin hl-python">{</span><span class="hl-source hl-python hl-embedded"><span class="hl-meta hl-qualified-name hl-python"><span class="hl-meta hl-generic-name hl-python">name</span></span></span></span><span class="hl-meta hl-interpolation hl-python"><span class="hl-punctuation hl-section hl-interpolation hl-end hl-python">}</span></span><span class="hl-string hl-quoted hl-double hl-python"><span class="hl-punctuation hl-definition hl-string hl-end hl-python">&quot;</span></span></span>
+</span></code></pre>
+<blockquote dir="auto">
+<p dir="auto">نقل‌قول فارسی: «سادگی، نهایت پیچیدگی است.»</p>
+</blockquote>
+<h2 id="english-section" dir="auto">English section</h2>
+<p dir="auto">This paragraph is English, so it is left-aligned automatically thanks to <code>dir="auto"</code>.<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<ol>
+<li dir="auto">First</li>
+<li dir="auto">Second
+<ul>
+<li dir="auto">nested item</li>
+</ul>
+</li>
+<li dir="auto">Third</li>
+</ol>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup><p dir="auto">Footnotes work as well.</p>
+</div>
+<h2 id="پیوندها" dir="auto">پیوندها</h2>
+<p dir="auto">به <a href="guide/intro.md">راهنما</a> و <a href="https://example.com">سایت</a> سر بزنید.</p>
+
+</article>
+</main>
+</body>
+</html>

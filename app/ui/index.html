@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parchment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="toolbar">
+  <strong class="brand">Parchment</strong>
+  <button id="btn-open" type="button" data-i18n="open">Open</button>
+  <button id="btn-export" type="button" class="primary" data-i18n="export">Export</button>
+  <label><span data-i18n="template">Template</span>
+    <select id="opt-template"></select></label>
+  <label><span data-i18n="toc">Contents</span>
+    <select id="opt-toc">
+      <option value="auto" data-i18n="auto">Auto</option>
+      <option value="on" data-i18n="on">On</option>
+      <option value="off" data-i18n="off">Off</option>
+    </select></label>
+  <label><span data-i18n="dir">Direction</span>
+    <select id="opt-dir">
+      <option value="auto" data-i18n="auto">Auto</option>
+      <option value="ltr">LTR</option>
+      <option value="rtl">RTL</option>
+    </select></label>
+  <label class="check"><input id="opt-digits" type="checkbox"><span data-i18n="digits">Persian digits</span></label>
+  <label id="mode-wrap"><span data-i18n="output">Output</span>
+    <select id="opt-mode">
+      <option value="inline" data-i18n="single">Single file</option>
+      <option value="split" data-i18n="split">HTML + CSS</option>
+    </select></label>
+  <button id="btn-lang" type="button" class="ghost" title="Language">FA/EN</button>
+  <nav class="tabs" aria-label="View">
+    <button id="tab-edit" type="button" data-i18n="edit">Edit</button>
+    <button id="tab-view" type="button" data-i18n="preview">Preview</button>
+  </nav>
+</header>
+<main class="panes" data-view="edit">
+  <textarea id="editor" dir="auto" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+  <iframe id="preview" title="Preview" sandbox="allow-same-origin"></iframe>
+</main>
+<footer id="status" role="status"></footer>
+<input id="file-input" type="file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
+<script type="module" src="app.js"></script>
+</body>
+</html>

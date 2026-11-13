@@ -1,0 +1,39 @@
+name: Release CLI
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            asset: parch-linux-x86_64.tar.gz
+            bin: parch
+          - os: macos-latest
+            asset: parch-macos.tar.gz
+            bin: parch
+          - os: windows-latest
+            asset: parch-windows-x86_64.zip
+            bin: parch.exe
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release -p mdr-cli
+      - name: Package (unix)
+        if: runner.os != 'Windows'
+        run: tar -C target/release -czf ${{ matrix.asset }} ${{ matrix.bin }}
+      - name: Package (windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path target/release/${{ matrix.bin }} -DestinationPath ${{ matrix.asset }}
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ matrix.asset }}

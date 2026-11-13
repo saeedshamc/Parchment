@@ -1,0 +1,27 @@
+:root{color-scheme:light dark;--bg:#f6f7f9;--panel:#fff;--fg:#1c2127;--muted:#667085;--border:#d9dde3;--accent:#8a4b08;--accent-fg:#fff;--bar:44px}
+@media (prefers-color-scheme:dark){:root{--bg:#10131a;--panel:#171b24;--fg:#e6e9ef;--muted:#98a2b3;--border:#2a3140;--accent:#e0a96d;--accent-fg:#1a1205}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font:14px/1.4 "Vazirmatn","Vazir","Segoe UI",system-ui,-apple-system,Roboto,Tahoma,sans-serif;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;padding:.5rem .75rem;background:var(--panel);border-bottom:1px solid var(--border)}
+.brand{margin-inline-end:.5rem;font-size:1.05rem}
+label{display:inline-flex;align-items:center;gap:.35rem;color:var(--muted)}
+label.check{color:var(--fg)}
+button,select{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:.3rem .6rem}
+button{cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:600}
+button.ghost{border-color:transparent;color:var(--muted)}
+.tabs{display:none;margin-inline-start:auto;gap:.25rem}
+.tabs button.active{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.panes{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr}
+#editor{width:100%;height:100%;resize:none;border:0;border-inline-end:1px solid var(--border);padding:1rem;background:var(--panel);color:var(--fg);font:14px/1.6 "Vazirmatn",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;tab-size:2;outline:none}
+#preview{width:100%;height:100%;border:0;background:#fff}
+#status{min-height:1.6rem;padding:.2rem .75rem;color:var(--muted);border-top:1px solid var(--border);background:var(--panel);font-size:12px}
+#status.error{color:#d92d20}
+@media (max-width:760px){
+  .tabs{display:flex}
+  .panes{grid-template-columns:1fr}
+  .panes[data-view=edit] #preview,.panes[data-view=view] #editor{display:none}
+  #editor{border-inline-end:0}
+}

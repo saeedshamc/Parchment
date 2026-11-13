@@ -1,0 +1,20 @@
+[package]
+name = "mdr-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Parchment core: Markdown to themed HTML/CSS with RTL support."
+
+[features]
+default = ["highlight"]
+# Syntax highlighting for fenced code blocks (pure Rust, WASM friendly).
+highlight = ["dep:syntect"]
+# JSON request/response API shared by the desktop app and the WASM build.
+api = ["dep:serde", "dep:serde_json"]
+
+[dependencies]
+pulldown-cmark = { version = "0.12", default-features = false, features = ["html"] }
+syntect = { version = "5.2", optional = true, default-features = false, features = ["default-syntaxes", "html", "regex-fancy"] }
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
